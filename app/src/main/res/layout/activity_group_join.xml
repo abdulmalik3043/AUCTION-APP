@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".GroupJoin">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/AuctionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/NoOfBidders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bidders: 1"
+        android:textSize="20dp"
+        android:layout_below="@+id/AuctionName" />
+    <ListView
+        android:id="@+id/ItemsList"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/NoOfBidders" />
+    <RelativeLayout
+        android:id="@+id/ItemDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/ItemsList">
+
+        <ImageView
+            android:id="@+id/ItemIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_item"
+            android:layout_centerHorizontal="true"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:text="Name: " />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/StartingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemName"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Starting Price: "
+            android:textColor="@color/black" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/HighestBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/StartingPrice"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Highest Bid: "
+            android:textColor="@color/black" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LeaderboardPosition"
+            android:layout_centerHorizontal="true"
+            android:hint="Enter amount"
+            android:layout_margin="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/BidAmount"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/LeaderboardPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HighestBid"
+            android:layout_centerHorizontal="true"
+            android:text="Your Leaderboard Position: "
+            android:textColor="@color/black"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendToSocketBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ItemDisplay"
+        android:layout_marginTop="20dp"
+        android:text="Join"
+        android:layout_centerHorizontal="true" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendToSocketBtn"
+        android:text=""
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

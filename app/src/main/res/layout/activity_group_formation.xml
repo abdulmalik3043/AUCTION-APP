@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupFormation">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/AuctionName_OwnerSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/NoOfBidders_OwnerSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bidders: 0"
+        android:textSize="20dp"
+        android:layout_below="@+id/AuctionName_OwnerSide" />
+    <ListView
+        android:id="@+id/ItemsList_OwnerSide"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@+id/NoOfBidders_OwnerSide"/>
+    <RelativeLayout
+        android:id="@+id/ItemDisplay_OwnerSide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/ItemsList_OwnerSide">
+
+        <ImageView
+            android:id="@+id/ItemIcon_OwnerSide"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_item"
+            android:layout_centerHorizontal="true"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ItemName_OwnerSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemIcon_OwnerSide"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:text="Name: " />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/StartingPrice_OwnerSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ItemName_OwnerSide"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Starting Price: "
+            android:textColor="@color/black" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/HighestBid_OwnerSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/StartingPrice_OwnerSide"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Highest Bid: "
+            android:textColor="@color/black" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Leaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LeaderBoard: "
+            android:textColor="@color/black"
+            android:layout_below="@+id/HighestBid_OwnerSide"
+            android:layout_margin="10dp" />
+    </RelativeLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/StartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start auction"
+        android:layout_below="@+id/ItemDisplay_OwnerSide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ActiveBiddersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active Bidders"
+        android:textColor="@color/black"
+        android:layout_below="@+id/StartButton" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ActiveBidders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ActiveBiddersText"
+        android:textColor="@color/black" />
+   <!--
+    <ListView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_below="@+id/ActiveBidders"
+        android:layout_above="@+id/Switch"
+        android:foregroundGravity="bottom"/> !-->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selective Flooding"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
