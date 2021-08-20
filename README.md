@@ -8,6 +8,7 @@
             While the online system doesn't provide a fair chance to the users with poor internet access, 
             it also has other drawbacks such as single point of failure, expensive servers and many more.
             The existing P2P systems aim to remove these limitations.
+    
    **-->** While the existing systems eliminate the above drawbacks by forming a peer-to-peer group in a local Wi-Fi network of 
            connected devices, they fail to address the issue which causes unnecessary or excessive broadcasts in the system. 
   
